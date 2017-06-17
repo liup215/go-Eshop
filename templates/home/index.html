@@ -8,7 +8,7 @@
         <ul class="am-slides">
             {{range $index,$value := .banners}}
             {{$value.class}}
-            <li style="background-color: {{$value.style}}"><a href="{{$value.href}}"><img src="{{$value.imgSrc}}" /></a></li>
+            <li style="background-color: {{$value.style}}"><a href="{{$value.href}}"><img src="/public/{{$value.img_src}}" /></a></li>
             {{end}}
 
         </ul>
@@ -45,7 +45,7 @@
                             {{range $index,$value:=.categories}}
                             <li class="appliance js_toggle relative first">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="{{$value.cateTitle.imgSrc}}"></i><a class="ml-22" title="{{$value.cateTitle.title}}">{{$value.cateTitle.align}}</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="/public/{{$value.cateTitle.img_src}}"></i><a class="ml-22" title="{{$value.cateTitle.title}}">{{$value.cateTitle.align}}</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -107,7 +107,7 @@
         <div class="am-g am-g-fixed smallnav">
             {{range $index,$value:=.smallnav}}
             <div class="am-u-sm-3">
-                <a href="{{$value.href}}"><img src="{{$value.imgSrc}}" />
+                <a href="{{$value.href}}"><img src="/public/{{$value.img_src}}" />
                     <div class="title">{{$value.title}}</div>
                 </a>
             </div>
@@ -126,7 +126,7 @@
                     <li class="title-first"><a target="_blank" href="{{$value.href}}">
 
                         <span>[{{$value.type}}]</span>{{$value.title}}
-                        <img src="{{$value.imgSrc}}"></img>
+                        <img src="/public/{{$value.img_src}}"></img>
                         <p>{{$value.short}}</p>
                     </a></li>
                     {{else}}
@@ -136,8 +136,8 @@
 
                     <div class="mod-vip">
                         <div class="m-baseinfo">
-                            <a href="../person/index.html">
-                                <img src="../images/getAvatar.do.jpg">
+                            <a href="/public/person/index.html">
+                                <img src="public/images/getAvatar.do.jpg">
                             </a>
                             <em>
                                 Hi,<span class="s-name">小叮当</span>
@@ -157,7 +157,7 @@
                         <div class="clear"></div>
                     </div>
                 </ul>
-                <div class="advTip"><img src="../images/advTip.jpg"/></div>
+                <div class="advTip"><img src="/public/images/advTip.jpg"/></div>
             </div>
         </div>
         <div class="clear"></div>
@@ -188,7 +188,7 @@
         <div class="am-g am-g-fixed recommendation">
             <!--{{$dayrec:=.dayRec}}-->
             <div class="clock am-u-sm-3">
-                <img src="{{.dayRec.topImgSrc}} "></img>
+                <img src="/public/{{.dayRec.topimg_src}} "></img>
                 <p>{{.dayRec.mTitle}}<br>{{.dayRec.sTitle}}</p>
             </div>
 
@@ -203,7 +203,7 @@
                     <h4>{{$value.sTitle}}</h4>
                 </div>
                 <div class="recommendationMain one">
-                    <a href="{{$value.href}}"><img src="{{$value.imgSrc}} "></img></a>
+                    <a href="{{$value.href}}"><img src="/public/{{$value.img_src}} "></img></a>
                 </div>
             </div>
             {{end}}
@@ -223,7 +223,7 @@
                     <div class="{{$value.style}} "></div>
                     <h4>{{$value.type}}</h4>
                     <div class="activityMain ">
-                        <img src="{{$value.imgSrc}} "></img>
+                        <img src="/public/{{$value.img_src}} "></img>
                     </div>
                     <div class="info ">
                         <a href="{{$value.href}}"><h3>{{$value.title}}</h3></a>
@@ -267,7 +267,7 @@
                                 零食大礼包
                             </div>
                         </div>
-                        <img src="{{$value.adds.imgSrc}} " />
+                        <img src="/public/{{$value.adds.img_src}} " />
                     </a>
                     <div class="triangle-topright"></div>
                 </div>
@@ -282,7 +282,7 @@
                         </div>
                         <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
                     </div>
-                    <a href="{{$floorValue.href}}"><img src="{{$floorValue.imgSrc}}" /></a>
+                    <a href="{{$floorValue.href}}"><img src="/public/{{$floorValue.img_src}}" /></a>
                 </div>
                 {{end}}
             </div>

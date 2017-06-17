@@ -10,7 +10,10 @@ import (
 
 func InitTango()(*tango.Tango){
 	t:=tango.Classic();
-	t.Use(tango.Static())
+	t.Use(tango.Static(tango.StaticOptions{
+		Prefix:"public",
+		RootPath:"./public",
+	}))
 	t.Use(renders.New(renders.Options{
 		Reload:true,
 		Directory:"./templates",
@@ -19,6 +22,7 @@ func InitTango()(*tango.Tango){
 
 	t.Get("/",new(home.IndexAction))
 	t.Get("/admin/login",new(admin.LoginAction))
+	t.Get("/admin",new(admin.IndexAction))
 	t.Post("/admin/login",new(admin.LoginAction))
 
 	return t

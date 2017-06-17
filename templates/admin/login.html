@@ -10,16 +10,16 @@
     <title>{{.title}}</title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/public/admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/public/admin/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/public/admin/vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="/public/admin/build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="login">
@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <!--<a class="btn btn-default submit" href="index.html">登录</a>-->
-                        <button class="btn btn-default submit" id="submit" onclick="doLogin();">登录</button>
+                        <button class="btn btn-default submit" id="submit">登录</button>
                         <a class="reset_pass" href="#">忘记密码?</a>
                     </div>
 
@@ -100,21 +100,6 @@
     </div>
 </div>
 </div>
-<script type="application/javascript">
-    function doLogin() {
-        alert("aaa")
-        var data ={
-            "Username":"aaa",
-            "Password":"bbb"
-        }
-        $.ajax({
-            url:"admin/login",
-            type:"POST",
-            contentType:"application/json; charset=utf-8",
-            data:data
-        })
-    }
 
-</script>
 </body>
 </html>
